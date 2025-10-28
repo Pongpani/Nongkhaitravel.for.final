@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>สถานที่ท่องเที่ยว | NongkhaiTravel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container topbar">
+    <a class="brand" href="./index.html"><img src="https://placehold.co/64x64?text=NK" alt="">NongkhaiTravel</a>
+    <nav>
+      <a href="./index.html">หน้าแรก</a>
+      <a href="./about.html">เกี่ยวกับหนองคาย</a>
+      <a href="./contact.html">ติดต่อเรา</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container readable">
+  <div class="breadcrumb">
+    <a href="./index.html">หน้าแรก</a> › <span>หมวดหมู่:</span> <span id="placeCat">-</span> › <strong id="placeName">-</strong>
+  </div>
+
+  <article class="article">
+    <div>
+      <div id="mediaBox"></div>
+      <h1 id="placeName" style="margin:12px 0 8px">-</h1>
+      <p id="placeDesc"></p>
+      <h3 style="margin-top:18px">ประวัติ/ข้อมูลสถานที่</h3>
+      <p id="placeHistory">-</p>
+    </div>
+    <aside>
+      <div class="info-card">
+        <div class="kv">
+          <div><strong>หมวดหมู่</strong><br><span id="placeCat"></span></div>
+          <div><strong>ตำบล/อำเภอ</strong><br><span id="placeSub"></span></div>
+          <div><strong>เวลาเปิด-ปิด</strong><br><span id="placeHours"></span></div>
+          <div><strong>ค่าเข้าชม</strong><br><span id="placeFee"></span></div>
+          <div style="grid-column:1/-1"><strong>ที่อยู่</strong><br><span id="placeAddr"></span></div>
+        </div>
+        <div class="map-embed" style="margin-top:12px">
+          <iframe id="placeMap" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="margin-top:10px; display:flex; gap:8px">
+          <a id="mapLink" class="btn outline" target="_blank" rel="noreferrer">เปิดแผนที่</a>
+          <a href="./index.html" class="btn">กลับหน้าแรก</a>
+        </div>
+      </div>
+    </aside>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>NongkhaiTravel · Bas Studio</small>
+    <a href="./index.html">หน้าแรก</a>
+  </div>
+</footer>
+
+<script src="./assets/data.js"></script>
+<script src="./assets/app.js"></script>
+<script>window.NKT && window.NKT.renderPlaceDetail && window.NKT.renderPlaceDetail();</script>
+</body>
+</html>
+

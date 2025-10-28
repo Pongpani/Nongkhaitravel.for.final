@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>เข้าสู่ระบบผู้ดูแล | NongkhaiTravel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css"/>
+  <style>header{display:none}</style>
+</head>
+<body>
+  <main class="container readable" style="margin-top:80px; text-align:center">
+    <h1>เข้าสู่ระบบผู้ดูแล</h1>
+    <form id="loginForm" class="admin-form" style="max-width:420px; margin:auto">
+      <label>รหัสผ่าน <input id="password" type="password" required placeholder="กรอกรหัสผ่าน"></label>
+      <button class="btn" type="submit">เข้าสู่ระบบ</button>
+    </form>
+    <p style="margin-top:16px"><a href="./index.html">หน้าแรก</a></p>
+  </main>
+  <script>
+    const PASSWORD = "admin123";
+    document.getElementById("loginForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const pw = document.getElementById("password").value.trim();
+      if (pw === PASSWORD) {
+        localStorage.setItem("nkt_admin_loggedin", "true");
+        window.location.href = "./admin.html";
+      } else {
+        alert("รหัสผ่านไม่ถูกต้อง");
+      }
+    });
+  </script>
+</body>
+</html>
+

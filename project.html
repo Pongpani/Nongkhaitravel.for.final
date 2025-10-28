@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ข้อมูลโครงงาน – NongkhaiTravel (ปวช.3)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="./index.html">NongkhaiTravel</a>
+    <nav>
+      <a href="./index.html">หน้าแรก</a>
+      <a href="./about.html">เกี่ยวกับจังหวัด</a>
+      <a class="active" href="./project.html">ข้อมูลโครงงาน</a>
+      <a href="./contact.html">ติดต่อเรา</a>
+      <a href="./login.html">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container readable">
+  <h1>ข้อมูลโครงงาน: เว็บไซต์แนะนำสถานที่ท่องเที่ยวอำเภอเมืองหนองคาย</h1>
+  <p><span class="badge">โครงงานจบ ปวช.3 – สาขาคอมพิวเตอร์ธุรกิจ</span></p>
+
+  <h2>1) ชื่อโครงงาน</h2>
+  <p><strong>NongkhaiTravel – เว็บไซต์แนะนำสถานที่ท่องเที่ยวอำเภอเมืองหนองคาย</strong></p>
+
+  <h2>2) ที่มาและความสำคัญ</h2>
+  <p>
+    หนองคายเป็นเมืองท่องเที่ยวสำคัญริมโขง แต่ข้อมูลกระจัดกระจาย เว็บไซต์นี้พัฒนาขึ้นเพื่อรวบรวมสถานที่เด่น
+    พร้อมคำอธิบายและแผนที่ในที่เดียว ใช้งานง่าย เหมาะสำหรับนักท่องเที่ยวและผู้ที่ต้องการแนะนำเมืองให้ผู้อื่นรู้จัก
+  </p>
+
+  <h2>3) วัตถุประสงค์</h2>
+  <ul>
+    <li>พัฒนาเว็บแอปแบบสถิตสำหรับเผยแพร่ข้อมูลแหล่งท่องเที่ยว</li>
+    <li>ฝัง Google Maps เพื่อช่วยวางแผนการเดินทาง</li>
+    <li>มีหน้าหลังบ้านจำลองให้แก้ไขข้อมูลได้ด้วย LocalStorage</li>
+  </ul>
+
+  <h2>4) ขอบเขตของระบบ</h2>
+  <ul>
+    <li>หน้าผู้ใช้: หน้าแรก, เกี่ยวกับ, ติดต่อ, ข้อมูลโครงงาน</li>
+    <li>หลังบ้าน (จำลอง): เพิ่ม/แก้ไข/ลบสถานที่, ระบบใส่รหัสผ่านก่อนเข้า</li>
+    <li>ไม่มีฐานข้อมูลเซิร์ฟเวอร์จริง ใช้ LocalStorage เพื่อการสาธิต</li>
+  </ul>
+
+  <h2>5) เครื่องมือและเทคโนโลยีที่ใช้</h2>
+  <ul>
+    <li>Frontend: HTML, CSS, JavaScript (Vanilla)</li>
+    <li>Data: LocalStorage, โครงสร้างข้อมูล JSON</li>
+    <li>Map: Google Maps Embed</li>
+    <li>โฮสต์: GitHub Pages</li>
+  </ul>
+
+  <h2>6) โครงสร้างไฟล์</h2>
+  <pre><code>/
+├─ index.html
+├─ about.html
+├─ project.html
+├─ contact.html
+├─ login.html
+├─ admin.html
+└─ assets/
+   ├─ styles.css
+   ├─ data.js
+   └─ app.js</code></pre>
+
+  <h2>7) คู่มือการใช้งานโดยย่อ</h2>
+  <ol>
+    <li>เปิด <strong>index.html</strong> เพื่อดูรายการสถานที่</li>
+    <li>กด <em>เปิดพรีวิวแผนที่</em> เพื่อดูแผนที่ฝัง</li>
+    <li>เข้าสู่ระบบ <strong>Admin</strong> ผ่านหน้า <strong>login.html</strong> (รหัสเริ่มต้น: <code>admin123</code>)</li>
+    <li>เพิ่ม/แก้ไข/ลบสถานที่ แล้วข้อมูลจะถูกบันทึกในเบราว์เซอร์</li>
+  </ol>
+
+  <h2>8) แผนพัฒนาต่อ</h2>
+  <ul>
+    <li>ย้ายข้อมูลจาก LocalStorage ไปสู่ฐานข้อมูลจริง (เช่น Firebase)</li>
+    <li>เพิ่มระบบอัปโหลดรูปภาพ</li>
+    <li>รองรับหลายอำเภอ/หลายภาษา</li>
+  </ul>
+
+  <h2>9) ผู้จัดทำ</h2>
+  <p>วรงค์กร นันทมีชัย (Bas) – วิทยาลัยการอาชีพหนองคาย, สาขาคอมพิวเตอร์ธุรกิจ</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© NongkhaiTravel – โครงงานจบ ปวช.3</small>
+    <a href="./index.html">กลับหน้าแรก</a>
+  </div>
+</footer>
+</body>
+</html>
